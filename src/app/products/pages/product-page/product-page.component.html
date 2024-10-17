@@ -1,5 +1,11 @@
 <p>product-page works!</p>
 
+
+<products-price-page
+  *ngIf="isProductVisible"
+  [price]="currentPrice"
+/>
+
 <button
   class="btn btn-outline-primary"
   (click)="isProductVisible = !isProductVisible"
@@ -7,4 +13,11 @@
   Toggle product page
 </button>
 
-<products-price-page />
+<button
+  class="btn btn-outline-warning"
+  (click)="increasePrice()"
+>
+  Increase price
+</button>
+
+

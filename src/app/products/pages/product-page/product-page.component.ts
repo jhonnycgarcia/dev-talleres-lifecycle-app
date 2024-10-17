@@ -27,43 +27,47 @@ export class ProductPageComponent implements
   OnDestroy
 {
 
-  public isProductVisible: boolean = false;
+  public isProductVisible: boolean = true;
+  public currentPrice: number = 0;
 
   constructor() {
-    console.log('ProductPageComponent constructor');
+    console.log('PADRE constructor');
   }
 
   ngOnInit(): void {
-    console.log('ProductPageComponent ngOnInit');
+    console.log('PADRE ngOnInit');
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log({ changes });
-    console.log('ProductPageComponent ngOnChanges');
+    console.log('PADRE ngOnChanges');
   }
 
   ngDoCheck(): void {
-    console.log('ProductPageComponent ngDoCheck');
+    console.log('PADRE ngDoCheck');
   }
 
   ngAfterContentInit(): void {
-    console.log('ProductPageComponent ngAfterContentInit');
+    console.log('PADRE ngAfterContentInit');
   }
 
   ngAfterContentChecked(): void {
-    console.log('ProductPageComponent ngAfterContentChecked');
+    console.log('PADRE ngAfterContentChecked');
   }
 
   ngAfterViewInit(): void {
-    console.log('ProductPageComponent ngAfterViewInit');
+    console.log('PADRE ngAfterViewInit');
   }
 
   ngAfterViewChecked(): void {
-    console.log('ProductPageComponent ngAfterViewChecked');
+    console.log('PADRE ngAfterViewChecked');
   }
 
   ngOnDestroy(): void {
-    console.log('ProductPageComponent ngOnDestroy');
+    console.log('PADRE ngOnDestroy');
+  }
+
+  increasePrice(): void {
+    this.currentPrice += 10;
   }
 
 }
